@@ -8,10 +8,13 @@
     <title>Ohaya Shop</title>
 </head>
 <body>
+    <!--header -->
     <header>
         <h1>Welcome to Ohaya Shop</h1>
     </header>
+    <!--main content-->
     <main>
+        <!-- section for products -->
         <section class="items-products">
             <h2>Phone products</h2>
             <ul>
@@ -35,6 +38,7 @@
                 <dd>Business-class laptop known for its durability and performance.</dd>
             </dl>
         </section>
+        <!-- gallery section -->
         <section class="gallery-products">
            <div class="gallery-phone">
                 <h2>Phone Gallery</h2>
@@ -55,6 +59,8 @@
                 <img src="https://th.bing.com/th/id/OIP.xOdK2d7p7ueQ87pavvApfwHaHa?w=207&h=206&c=7&r=0&o=7&pid=1.7&rm=3" alt="Lenovo ThinkPad X1 Carbon">
            </div>
         </section>
+
+        <!-- specifications section -->
         <section class="Specifications-products">
             <h2>Specifications Products</h2>
             <table border="1" style="width: 100%; height: 300px; border-collapse: collapse;">
@@ -104,6 +110,8 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- media products section -->
         <section class="media-products">
             <h2>Media Products</h2>
            <article>
@@ -162,24 +170,47 @@
             </video>
            </article>
         </section>
+
+        <!-- contact form section -->
         <section class="contact-form">
             <fieldset style="margin: 10px;">
                 <legend>Contact Us</legend>
 
             <form action="#" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name"><br><br>
+                <input type="text" minlength="2" id="name" name="name" placeholder="Your Name" required autocomplete="name"><br><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email"><br><br>
-
-                <label for="message">Message:</label><br>
+                <input type="email" minlength="2" pattern="@gmail.com" id="email" name="email" placeholder="Your Email" required autocomplete="email"><br><br>
+                <label for="phone">Phone:</label>
+                <input pattern="\+258(84|85|86|87)\d{7}" type="tel" id="phone" name="phone" placeholder="Your Phone Number" required autocomplete="tel"><br><br>
+                <province>
+                    <label for="province">Province:</label>
+                    <select id="province" name="province" required>
+                        <option value="" disabled selected>Select your province</option>
+                        <option value="Maputo">Maputo</option>
+                        <option value="Gaza">Gaza</option>
+                        <option value="Inhambane">Inhambane</option>
+                        <option value="Sofala">Sofala</option>
+                        <option value="Manica">Manica</option>
+                        <option value="Tete">Tete</option>
+                        <option value="Zambezia">Zambezia</option>
+                        <option value="Nampula">Nampula</option>
+                        <option value="Niassa">Niassa</option>
+                        <option value="Cabo Delgado">Cabo Delgado</option>
+                    </select>
+                </province>
+                <br><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required><br><br>
+                <label for="message">Message</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea><br><br>
-
                 <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
             </form>
         </section>
     </main>
+    <!--footer-->
     <footer>
         <p>&copy; 2025 Ohaya Shop. All rights reserved.</p>
     </footer>
